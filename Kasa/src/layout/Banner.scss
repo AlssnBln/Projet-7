@@ -1,0 +1,25 @@
+@use "../scss/variables.scss" as *;
+
+.banner{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    max-width: 100vw;
+    padding-inline: 2rem;
+    background-image: url(../../images/banner.png);
+    min-height: 140px;
+    max-width: 80vw;
+    margin: auto;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    color: $color-tertiary;
+    max-width: 100%;
+    @media screen and (width <= 768px) {
+        border-radius: 0.5rem;
+    }
+    & h2 {
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,61 @@
+@use "../scss/variables.scss" as *;
+
+.apartment__header {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    gap: 1rem;
+    @media screen and (width <= 768px) {
+        flex-direction: column;
+        .apartment__owner {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .apartment__title {
+        flex-grow: 1;
+        & .apartment__tags {
+            display: flex;
+            gap: 1rem;
+            span {
+            background-color: $color-primary;
+            color: $color-tertiary;
+            height: 25px;
+            width: 144px;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 0.3rem;
+            }
+        }
+    }
+    .apartment__owner__details {
+        display: flex;
+        gap: 0.5rem;
+        @media screen and (width <= 768px) {
+            order: 1;
+        }
+    }
+    .apartment__owner__badge img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: $grey-color;
+    }
+    .apartment__owner__stars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        font-size: 2rem;
+        color: $grey-color;
+        .on {
+            color: $color-primary;
+        }
+    }
+    h3 {
+        margin-block: 0;
+        display: grid;
+        place-items: center;
+        font-weight: 400;
+    }
+}

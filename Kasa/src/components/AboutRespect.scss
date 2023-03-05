@@ -1,0 +1,49 @@
+@use "../scss/variables.scss" as *;
+
+
+.about__respect {
+    width: 80%;
+    margin-left: 5rem;
+    margin-bottom: 3%;
+    overflow: hidden;
+    @media screen and (width <= 768px) {
+        width: 100%;
+        margin-left: 0;
+    }
+    p {
+        margin-block: 0;
+    }
+    .respect__header {
+    background-color: $color-primary;
+    color: $color-tertiary;
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    }
+    .respect__content {
+        background-color: $background-dark;
+        color: $color-primary;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        position: relative;
+        top: -0.5rem;
+        font-size: 16px;
+        font-family: Montserrat;
+        z-index: -1;
+        animation: slide-in 0.5s ease-in-out;
+    }
+    @keyframes slide-in {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
